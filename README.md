@@ -1,6 +1,6 @@
 # FABF_Project
 
 ### Fonctionnalités  
+## [ ]Register  
 ## [ ]Login
-## [ ]Register
 ## [ ]Password_forgotten
