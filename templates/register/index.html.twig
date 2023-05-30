@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container">
+
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                <div class="card mb-3">
+
+                    <div class="card-body bg-light">
+
+                    <div class="pt-4 pb-2">
+                        <h5 class="card-title text-center pb-0 fs-4">Créer un compte</h5>
+                        <p class="text-center small">Entrez vos informations</p>
+                    </div>
+
+                    <form action="/login" class="row g-3 needs-validation" novalidate>
+                        <div class="col-12">
+                        <label for="yourName" class="form-label">Votre nom</label>
+                        <input type="text" name="name" class="form-control" id="yourName" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre nom!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourLastName" class="form-label">Votre prénom</label>
+                        <input type="text" name="lastName" class="form-control" id="yourLastName" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre nom!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourBirthPlace" class="form-label">Votre lieu de naissance</label>
+                        <input type="text" name="yourBirthPlace" class="form-control" id="yourBirthPlace" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre lieu de naissance!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourBirthDate" class="form-label">Votre date de naissance</label>
+                        <input type="date" name="yourBirthDate" class="form-control" id="yourBirthDate" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre date de naissance!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourTel" class="form-label">Votre numéro de téléphone</label>
+                        <input type="number" name="yourTel" class="form-control" id="yourTel" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre numéro de téléphone!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourEmail" class="form-label">Votre e-mail</label>
+                        <input type="email" name="email" class="form-control" id="yourEmail" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre adresse e-mail!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourUsername" class="form-label">Nom d'utilisateur.</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="text" name="username" class="form-control" id="yourUsername" required>
+                            <div class="invalid-feedback">Veuillez renseigner votre nom d'utilisateur.</div>
+                        </div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourPassword" class="form-label">Mot de passe</label>
+                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                        <div class="invalid-feedback">Veuillez renseigner votre mot de passe!</div>
+                        </div>
+
+                        <div class="col-12">
+                        <label for="yourRePassword" class="form-label">Vérifier le mot de passe</label>
+                        <input type="password" name="password" class="form-control" id="yourRePassword" required>
+                        <div class="invalid-feedback">Veuillez renseigner le même mot de passe!</div>
+                        </div>
+
+                        <div class="col-15">
+                            <label for="yourRole" class="form-label">Sélectionnez votre rôle</label>
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                <label class="btn btn-outline-success" for="btnradio1">Agent de solde</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-success" for="btnradio2">Bénéficiaire</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-success" for="btnradio3">Agent de Structure</label>
+                                <!--
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                <label class="btn btn-outline-success" for="btnradio4">Administrateur</label> 
+                                -->
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12">
+                        <button class="btn btn-primary w-100" type="submit">Créer un compte</button>
+                        </div>
+                        <div class="col-12">
+                        <p class="small mb-0">Avez-vous déjà un compte? <a href="/login">Connectez-vous</a></p>
+                        </div>
+                    </form>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        </div>
+    </main>
+{% endblock %}
